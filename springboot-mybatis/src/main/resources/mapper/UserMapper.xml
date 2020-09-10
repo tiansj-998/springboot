@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.broada.demo.springbootmybatis.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="com.broada.demo.springbootmybatis.entity.User">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="password" jdbcType="VARCHAR" property="password" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    </resultMap>
+    <insert id="insertUser" parameterType="com.broada.demo.springbootmybatis.entity.User">
+        INSERT INTO `t_user` (id,name,password) VALUES (null, #{name}, #{password})
+    </insert>
+
+    <select id="queryUserById" resultMap="BaseResultMap">
+        SELECT * FROM t_user
+        <where>
+            id = ${id}
+        </where>
+    </select>
+
+    <select id="queryAllUser" resultMap="BaseResultMap">
+        SELECT * FROM t_user
+    </select>
+
+    <update id="updateUserById">
+        update t_user set
+        <if test="name != null">
+            name = #{name}
+        </if>
+        <if test="password != null">
+            ,password = #{password}
+        </if>
+        <where>
+            id = ${id}
+        </where>
+    </update>
+
+    <delete id="deleteById">
+        DELETE FROM t_user where id = ${id}
+    </delete>
+</mapper>
