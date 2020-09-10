@@ -9,7 +9,10 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class TopicConsumerListener {
-    //topic模式的消费者
+    /**
+     *  topic模式的消费者
+     * @param message
+     */
     @JmsListener(destination = "${spring.activemq.topic-name}",containerFactory = "topicListener")
     public void readActiveTopic(String message){
         System.out.println("topic接受到了" + message);

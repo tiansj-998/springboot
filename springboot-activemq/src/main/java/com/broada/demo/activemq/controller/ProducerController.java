@@ -7,11 +7,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.Resource;
 import javax.jms.Destination;
 import javax.jms.Queue;
 import javax.jms.Topic;
-import javax.sql.DataSource;
 
 /**
  * @Author tsj

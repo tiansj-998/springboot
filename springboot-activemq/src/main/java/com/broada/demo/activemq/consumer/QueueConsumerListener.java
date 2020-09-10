@@ -9,9 +9,13 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class QueueConsumerListener {
-    //queue模式的消费者
+    /**
+     *  queue模式的消费者
+     * @param message
+     */
     @JmsListener(destination = "${spring.activemq.queue-name}",containerFactory = "queueListener")
     public void readActiveQueue(String message){
         System.out.println("queue接受到了" + message);
+        System.out.println("queueListener可以开始做其它操作了。。");
     }
 }

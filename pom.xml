@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.3.RELEASE</version>
+        <version>2.2.6.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.broada.demo</groupId>
@@ -17,6 +17,7 @@
     <modules>
         <module>springboot-activemq</module>
         <module>springboot-mybatis</module>
+        <module>springboot-mongodb</module>
     </modules>
 
     <properties>

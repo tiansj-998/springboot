@@ -1,5 +1,5 @@
 # A SpringBoot demo of erhu
-## 给自己看的，比较简陋
+## 无情哈拉少~
 - [x] SpringBoot + Mysql
 - [ ] SpringBoot + MongoDB
 - [ ] SpringBoot + Redis
